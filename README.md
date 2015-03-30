@@ -1,6 +1,6 @@
 # Origami.js #
 
-[Example usage](//devonzuegel.com/pages/projects)
+[Example usage](http://devonzuegel.com/pages/projects#origamijs)
 
 ## Defining the `#origami` div ##
 Wrap the relevant html with a `#origami` div:
