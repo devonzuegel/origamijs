@@ -1,50 +1,62 @@
-<link rel="stylesheet" type="text/css" href="https://rawgit.com/sindresorhus/github-markdown-css/gh-pages/github-markdown.css"></link>
 
-<style type="text/css">
-	#origami { display: none; }
-	.dark 	 { opacity: 1.0; }
-	.pale  	 { opacity: 0.5; }
-</style>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Example :: .coffee</title>
 
-<script type="text/javascript">
-	//- Origami options.
-	document.origami = { 
-		fold: ['H2', 'H3', 'H4', 'H5', 'H6'],
-		start_closed: ['H3'],
-		hdr_klass: {
-			open: 'dark',
-			closed: 'pale',
-		},
-	};
-</script>
+	<link rel="stylesheet" type="text/css" href="https://rawgit.com/sindresorhus/github-markdown-css/gh-pages/github-markdown.css"></link>
 
+	<style type="text/css">
+		#origami { display: none; }
+		.dark 	 { opacity: 1.0; }
+		.pale  	 { opacity: 0.5; }
+	</style>
 
-<div id="origami" class="markdown-body">
-	<h1>Header 1</h1>
+	<script type="text/javascript">
+		//- Origami options.
+		document.origami = { 
+			fold: ['H2', 'H3', 'H4', 'H5', 'H6'],
+			start_closed: ['H3'],
+			hdr_klass: {
+				open: 'dark',
+				closed: 'pale',
+			},
+		};
+	</script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+<body>
+
+	<div id="origami" class="markdown-body">
+		<h1>Header 1</h1>
+
+			<h2>Header 2</h2>
+
+				<h3>Header 3</h3>
+				<h4>Header 4</h4>
+
+		<h1>Header 1</h1>
+
+			<h2>Header 2</h2>
+
+				<h3>Header 3</h3>
+				<h4>Header 4</h4>
+
+				<h3>Header 3</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+				<h3>Header 3</h3>
+				<h4>Header 4</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
 		<h2>Header 2</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
 
-			<h3>Header 3</h3>
-			<h4>Header 4</h4>
+	<script type="text/coffeescript" src="https://rawgit.com/devonzuegel/static-playground/master/src/documents/scripts/origami.js.coffee"></script>
 
-	<h1>Header 1</h1>
+	<script type="text/javascript" src="https://rawgithub.com/devonzuegel/static-playground/master/out/scripts/origami.js"></script>
 
-		<h2>Header 2</h2>
-
-			<h3>Header 3</h3>
-			<h4>Header 4</h4>
-
-			<h3>Header 3</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-			<h3>Header 3</h3>
-			<h4>Header 4</h4>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-	<h2>Header 2</h2>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-</div>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
-<script type="text/javascript" src="https://rawgithub.com/devonzuegel/static-playground/master/out/scripts/origami.js"></script>
+</body>
+</html>
