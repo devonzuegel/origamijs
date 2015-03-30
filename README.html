@@ -1016,18 +1016,38 @@ body .markdown-body
 }
 </style><title>README</title></head><body><article class="markdown-body"><h1 id="origamijs"><a name="user-content-origamijs" href="#origamijs" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Origami.js</h1>
 <p><a href="devonzuegel.com/">Example usage</a></p>
-<h2 id="dependencies"><a name="user-content-dependencies" href="#dependencies" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Dependencies</h2>
+<h2 id="usage"><a name="user-content-usage" href="#usage" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Usage</h2>
+<h4 id="defining-the-origami-div"><a name="user-content-defining-the-origami-div" href="#defining-the-origami-div" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Defining the <code>#origami</code> div</h4>
+<p>Wrap the relevant html with a <code>#origami</code> div:<br />
+<pre><code class="html">&lt;div id=&quot;origami&quot;&gt;
+    &lt;!-- HTML TO FOLD --&gt;
+&lt;/div&gt;
+</code></pre></p>
+<h4 id="including-the-js-or-coffee-files"><a name="user-content-including-the-js-or-coffee-files" href="#including-the-js-or-coffee-files" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Including the <code>.js</code> or <code>.coffee</code> files</h4>
+<p>At the bottom of the page, add either the <code>.js</code> or <code>.coffee</code> file:</p>
+<ul>
+<li>
+<p>Using <code>origami.js</code>&hellip;</p>
+</li>
+<li>
+<p>Using <code>origami.coffee</code>&hellip;</p>
+</li>
+</ul>
+<h5 id="using-origamicoffee"><a name="user-content-using-origamicoffee" href="#using-origamicoffee" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Using <code>origami.coffee</code></h5>
+<p><strong><br />
+If you opt to use the <code>.coffee</code> file instead of the <code>.js</code> file (not recommended), you must also include the following script </strong>after** the <code>.coffee</code> script. This will compile the Coffeescript to Javascript.<br />
+<pre><code class="html">&lt;script type=&quot;text/javascript&quot; src=&quot;https://rawgit.com/jashkenas/coffeescript/master/extras/coffee-script.js&quot;&gt;&lt;/script&gt;
+</code></pre></p>
 <h4 id="jquery"><a name="user-content-jquery" href="#jquery" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>JQuery</h4>
 <p>Include the following script tag in the <code>head</code> of your html page:<br />
 <pre><code class="html">&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js&quot;&gt;&lt;/script&gt;
-</code></pre><br />
-If you opt to use the <code>.coffee</code> file instead of the <code>.js</code> file (not recommended), you must also include the following script <br />
-- coffee-script.js (if you use )</p>
-<h2 id="usage"><a name="user-content-usage" href="#usage" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Usage</h2>
-<h4 id="defining-the-origami-div"><a name="user-content-defining-the-origami-div" href="#defining-the-origami-div" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Defining the <code>#origami</code> div</h4>
-<p>Wrap the relevant html with a <code>&lt;div id="origami"&gt;&lt;/div&gt;</code>.</p>
-<h4 id="including-the-js-or-coffee-files"><a name="user-content-including-the-js-or-coffee-files" href="#including-the-js-or-coffee-files" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Including the <code>.js</code> or <code>.coffee files</code></h4>
-<h4 id="options"><a name="user-content-options" href="#options" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Options</h4>
+</code></pre></p>
+<h4 id="css"><a name="user-content-css" href="#css" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>CSS</h4>
+<p>Include the following css to hide the contents of the <code>#origami</code> div until it has been fully rendered:<br />
+<pre><code class="css">#origami      {  display: none;  }
+</code></pre></p>
+<h4 id="customizations"><a name="user-content-customizations" href="#customizations" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Customizations</h4>
+<h5 id="options"><a name="user-content-options" href="#options" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Options</h5>
 <p>The following options are customizable:</p>
 <ul>
 <li><code>hierarchy</code>: Defines the hierarchy of headers to be folded.<ul>
@@ -1042,6 +1062,7 @@ If you opt to use the <code>.coffee</code> file instead of the <code>.js</code> 
 <li><code>btn_klass</code>: Defines the classes for the origami buton when its assocaited header is folded and unfolded. If you wish to apply two classes, write them as one string, separated by a space: <code>"class-one class-two"</code>.</li>
 <li><code>duration</code>: A string or number determining how long the animation will run. Higher values indicate slower animations, not faster ones. The strings &lsquo;fast&rsquo; and &lsquo;slow&rsquo; can be supplied to indicate durations of 200 and 600 milliseconds, respectively.</li>
 </ul>
+<h5 id="defaults"><a name="user-content-defaults" href="#defaults" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Defaults</h5>
 <p>The default values for these options are:<br />
 <pre><code class="coffee">optns = {
     hierarchy: ['H1', 'H2', 'H3', 'H4', 'H5', 'H6']
@@ -1058,4 +1079,7 @@ If you opt to use the <code>.coffee</code> file instead of the <code>.js</code> 
         closed: ''
     duration: 200     # Milliseconds.
 }
-</code></pre></p></article></body></html>
+</code></pre></p>
+<h5 id="customize"><a name="user-content-customize" href="#customize" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Customize</h5>
+<pre><code class="css">.origami-btn {  /* ... */  }
+</code></pre></article></body></html>

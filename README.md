@@ -4,19 +4,50 @@
 
 ## Usage ##
 
-#### Defining the `#origami` div ####
-Wrap the relevant html with a `<div id="origami">{{ HTML TO FOLD }}</div>`.
-
-#### Including the `.js` or `.coffee` files
-
-#### CSS ####
-```css
-#origami        {  display: none  }
-#origami-header {  /* ... */  }
+### Defining the `#origami` div ###
+Wrap the relevant html with a `#origami` div:
+```html
+<div id="origami">
+    <!-- HTML TO FOLD -->
+</div>
 ```
 
-#### Options ####
+### Including the `.js` or `.coffee` files ###
+At the bottom of the page, add either the `.js` or `.coffee` file:
 
+#### Using `origami.js` (recommended) ####
+**`origami.js` file:** Include the following script at bottom of your html:
+```html
+<script type="text/coffeescript" src="https://rawgit.com/devonzuegel/static-playground/master/src/documents/scripts/origami.js.coffee"></script>
+```
+
+#### Using `origami.coffee` ####
+
+1. **`origami.coffee` file:** Include the following script at bottom of your html:
+    ```html
+    <script type="text/coffeescript" src="https://rawgit.com/devonzuegel/static-playground/master/src/documents/scripts/origami.js.coffee"></script>
+    ```
+
+2. **Coffeescript Compiler:** If you opt to use the `.coffee` file instead of the `.js` file, you must also include the following script **after** the `.coffee` script. This will compile the Coffeescript to Javascript.
+    ```html
+    <script type="text/javascript" src="https://rawgit.com/jashkenas/coffeescript/master/extras/coffee-script.js"></script>
+    ```
+
+### JQuery ###
+Include the following script tag in the `head` of your html page:
+```html
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+```
+
+### CSS ###
+Include the following css to hide the contents of the `#origami` div until it has been fully rendered:
+```css
+#origami      {  display: none;  }
+```
+
+### Customizations ###
+
+### Options ###
 The following options are customizable:
 
 - `hierarchy`: Defines the hierarchy of headers to be folded.
@@ -29,6 +60,8 @@ The following options are customizable:
 - `btn_klass`: Defines the classes for the origami buton when its assocaited header is folded and unfolded. If you wish to apply two classes, write them as one string, separated by a space: `"class-one class-two"`.
 - `duration`: A string or number determining how long the animation will run. Higher values indicate slower animations, not faster ones. The strings 'fast' and 'slow' can be supplied to indicate durations of 200 and 600 milliseconds, respectively.
 
+
+### Defaults ###
 The default values for these options are:
 ```coffee
 optns = {
@@ -48,17 +81,7 @@ optns = {
 }
 ```
 
-
-## Dependencies ##
-
-#### JQuery ####
-Include the following script tag in the `head` of your html page:
-```html
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-```
-
-#### Coffeescript Compiler ####
-If you opt to use the `.coffee` file instead of the `.js` file (not recommended), you must also include the following script **after** the `.coffee` script. This will compile the Coffeescript to Javascript.
-```html
-<script type="text/javascript" src="https://rawgit.com/jashkenas/coffeescript/master/extras/coffee-script.js"></script>
+### Customize ###
+```css
+.origami-btn {  /* ... */  }
 ```
