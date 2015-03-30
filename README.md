@@ -2,9 +2,7 @@
 
 [Example usage](devonzuegel.com/)
 
-## Usage ##
-
-### Defining the `#origami` div ###
+## Defining the `#origami` div ##
 Wrap the relevant html with a `#origami` div:
 ```html
 <div id="origami">
@@ -12,40 +10,44 @@ Wrap the relevant html with a `#origami` div:
 </div>
 ```
 
-### Including the `.js` or `.coffee` files ###
-At the bottom of the page, add either the `.js` or `.coffee` file:
+## Including the Origami script ##
 
-#### Using `origami.js` (recommended) ####
-**`origami.js` file:** Include the following script at bottom of your html:
+### Using `origami.js` (recommended) ###
+Include the following script at bottom of your html:
 ```html
 <script type="text/coffeescript" src="https://rawgit.com/devonzuegel/static-playground/master/src/documents/scripts/origami.js.coffee"></script>
 ```
 
-#### Using `origami.coffee` ####
+You can find example usage with the `.js` file [here](https://github.com/devonzuegel/origamijs/blob/master/example-js.html).
 
-1. **`origami.coffee` file:** Include the following script at bottom of your html:
+### Using `origami.coffee` ###
+You can also opt to use the Coffeescript source + a Coffeescript compiler with the following steps. This is not recommended, as it is much slower.
+
+1. Include the following script at bottom of your html:
     ```html
     <script type="text/coffeescript" src="https://rawgit.com/devonzuegel/static-playground/master/src/documents/scripts/origami.js.coffee"></script>
     ```
 
-2. **Coffeescript Compiler:** If you opt to use the `.coffee` file instead of the `.js` file, you must also include the following script **after** the `.coffee` script. This will compile the Coffeescript to Javascript.
+2. *Coffeescript Compiler:* If you opt to use the `.coffee` file instead of the `.js` file, you must also include the following script **after** the `.coffee` script. This will compile the Coffeescript to Javascript.
     ```html
     <script type="text/javascript" src="https://rawgit.com/jashkenas/coffeescript/master/extras/coffee-script.js"></script>
     ```
 
-### JQuery ###
+You can find example usage with the `.coffee` file [here](https://github.com/devonzuegel/origamijs/blob/master/example-coffee.html).
+
+## JQuery ##
 Include the following script tag in the `head` of your html page:
 ```html
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 ```
 
-### CSS ###
+## CSS ##
 Include the following css to hide the contents of the `#origami` div until it has been fully rendered:
 ```css
 #origami      {  display: none;  }
 ```
 
-### Customizations ###
+## Customizations ##
 
 ### Options ###
 The following options are customizable:
